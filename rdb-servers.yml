@@ -1,0 +1,4 @@
+---
+- hosts: rdb-servers
+  roles:
+      - mysql

@@ -1,0 +1,10 @@
+[webapp-servers]
+webapp01
+webapp02
+
+[rdb-servers]
+rdb01
+
+[development:children]
+webapp-servers
+rdb-servers

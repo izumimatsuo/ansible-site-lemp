@@ -1,0 +1,7 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: setup net-tools package for test
+      yum:
+        name: net-tools

@@ -1,0 +1,13 @@
+# Created by https://www.gitignore.io/api/ansible,testinfra
+
+### Ansible ###
+*.retry
+
+### Testinfra ###
+__pycache__/
+.pytest_cache/
+
+### Ansible roles
+roles/
+
+# End of https://www.gitignore.io/api/ansible,testinfra

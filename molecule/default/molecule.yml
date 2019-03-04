@@ -1,0 +1,42 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: webapp01
+    groups:
+      - webapp-servers
+    image: centos:7
+    privileged: true
+    command: /sbin/init
+  - name: webapp02
+    groups:
+      - webapp-servers
+    image: centos:7
+    privileged: true
+    command: /sbin/init
+  - name: rdb01
+    groups:
+      - rdb-servers
+    image: centos:7
+    privileged: true
+    command: /sbin/init
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+  playbooks:
+    converge: ../../site.yml
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  options:
+    v: 1
+  lint:
+    name: flake8

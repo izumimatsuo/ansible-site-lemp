@@ -1,0 +1,12 @@
+---
+- src: https://github.com/izumimatsuo/ansible-role-osinit
+  name: osinit
+
+- src: https://github.com/izumimatsuo/ansible-role-nginx
+  name: nginx
+
+- src: https://github.com/izumimatsuo/ansible-role-php-fpm
+  name: php-fpm
+
+- src: https://github.com/izumimatsuo/ansible-role-mysql
+  name: mysql
